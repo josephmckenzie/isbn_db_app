@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Isbn Database Validator</title>
+	    <link href="/css/style.css" rel="stylesheet">
+
+	</head>
+	<body>
+		<h1 class="center">ISBN Number Validator</h1>
+		<h4> Check Your isbn number</h4>
+		<form action="/add" method="POST">
+		<input type="text" name="add_isbn_number" value="">
+		<input type="submit" name="submit">
+		</form>
+		<table style="width:60%;" align="center">
+			<tr>
+			<th>Isbn Numbers</th><th>Validity</th>
+			</tr>
+		<% select.each do |numbers| %>
+
+			<tr>
+				<td><%=numbers["isbn"]%></td><td><%=numbers["validity"]%></td>
+			</tr>
+					<%end%>
+
+		</table>
+		  
+
+		
+		
+		</form>
+	</body>
+</html>
