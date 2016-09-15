@@ -8,13 +8,16 @@
 
 	</head>
 	<body>
+		<div class="center">
 		<h1 class="center">ISBN Number Validator</h1>
-		<h4> Check Your isbn number</h4>
+		<h4 class="center"> Check Your isbn number</h4>
+		
 		<form action="/add" method="POST">
-		<input type="text" name="add_isbn_number" value="">
+		<input  pattern=".{10,20}" required  name="add_isbn_number" oninvalid="this.setCustomValidity('Isbn numbers only contain 10 or 13 numbers')">
 		<input type="submit" name="submit">
 		</form>
-		<table style="width:60%;" align="center">
+		</div>
+		<table style="width:60%; margin-top: 22px;" align="center">
 			<tr>
 			<th>Isbn Numbers</th><th>Validity</th>
 			</tr>

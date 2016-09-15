@@ -28,9 +28,11 @@ get '/' do
       db.exec("update isbn_numbers set (validity) = ('Invalid') where isbn = ('#{select[0]['isbn']}');")
 
 		erb :isbn, :locals => {:select => select ,:validity => validity, :all => all}
+
 	 else 
       db.exec("update isbn_numbers set (validity) = ('Valid') where isbn = ('#{select[0]['isbn']}');")
-	 	erb :isbn, :locals => {:select => select,:validity => validity, :all => all }	
+	 	erb :isbn, :locals => {:select => select,:validity => validity, :all => all }
+	
 	end	
 end
 
